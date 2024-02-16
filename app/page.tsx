@@ -56,7 +56,7 @@ export default function Home() {
     })
       .then((response) =>
         response.json().then((data) => {
-          setCookie('isSubmitted', true, { path: '/' });
+          setCookie('isSubmitted', true, { path: '/', maxAge: 30 * 60 * 1000 });
         })
       )
       .catch((e) => {
